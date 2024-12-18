@@ -1,4 +1,4 @@
-module component
+module github.com/TiktokCommence/component
 
 go 1.22.7
 

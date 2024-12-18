@@ -1,8 +1,8 @@
 package log
 
 import (
-	"component/log/config"
-	"component/log/writer"
+	"github.com/TiktokCommence/component/log/config"
+	"github.com/TiktokCommence/component/log/writer"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

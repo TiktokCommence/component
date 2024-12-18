@@ -1,8 +1,8 @@
 package writer
 
 import (
-	"component/log/config"
 	"fmt"
+	"github.com/TiktokCommence/component/log/config"
 	"github.com/natefinch/lumberjack"
 	"io"
 	"os"

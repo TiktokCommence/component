@@ -1,7 +1,7 @@
 package log
 
 import (
-	"component/log/config"
+	"github.com/TiktokCommence/component/log/config"
 	"testing"
 )
 

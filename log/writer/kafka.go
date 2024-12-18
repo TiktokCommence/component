@@ -1,9 +1,9 @@
 package writer
 
 import (
-	"component/log/config"
 	"fmt"
 	"github.com/IBM/sarama"
+	"github.com/TiktokCommence/component/log/config"
 	"io"
 )
 
