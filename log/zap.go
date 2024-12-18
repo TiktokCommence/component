@@ -36,7 +36,9 @@ func NewZapLogger(c config.Config) (*zap.Logger, error) {
 	}
 	writeSyncer := zapcore.NewMultiWriteSyncer(w...)
 	core := zapcore.NewCore(encoder, writeSyncer, level)
-	logger := zap.New(core, zap.AddCaller()) // zap.Addcaller() 输出日志打印文件和行数如： logger/logger_test.go:33
+	//在warn级别及以上打印堆栈信息
+	//caller需要往上跳一级
+	logger := zap.New(core, zap.AddCaller(), zap.AddCallerSkip(1), zap.AddStacktrace(zapcore.WarnLevel)) // zap.Addcaller() 输出日志打印文件和行数如： logger/logger_test.go:33
 	// 1. zap.ReplaceGlobals 函数将当前初始化的 logger 替换到全局的 logger,
 	// 2. 使用 logger 的时候 直接通过 zap.S().Debugf("xxx") or zap.L().Debug("xxx")
 	// 3. 使用 zap.S() 和 zap.L() 提供全局锁，保证一个全局的安全访问logger的方式
