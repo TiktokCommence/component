@@ -94,3 +94,5 @@ func NewLogger(cf *conf.LogConf) log.Logger {
 ```
 
 该日志组件还支持对于warn和error级别，能够打印堆栈信息
+
+由于支持将日志输出到kafka中,可以由具体的日志收集组件来收集各个服务的日志
